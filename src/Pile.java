@@ -5,39 +5,16 @@ import java.util.ArrayList;
  */
 public class Pile {
 
-    public Pile(ArrayList<String> list) {
-    }
+    private final ArrayList<String> listeDeString = new ArrayList<>();
+
+    public Pile(ArrayList<String> listeDeString) {}
 
     /**
      * Cette méthode vérifie si la pile est vide
-     * @return un booléen
+     * @return response type boolean
      */
     public boolean estVide(){
-        //TODO
-    }
-
-    /**
-     * Cette méthode retourne l'objet String au sommet de la pile
-     * @return l'objet de type String
-     */
-    public String sommet(){
-        //TODO
-    }
-
-    /**
-     * Cette méthode ajoute "s" à la pile
-     * @param s de type String
-     */
-    public void empiler(String s){
-        //TODO
-    }
-
-    /**
-     * Cette méthode retire le sommet de la pile et le retourne
-     * @return le sommet de la pile
-     */
-    public String depiler(){
-        //TODO
+        return listeDeString.isEmpty();
     }
 
     /**
@@ -45,7 +22,36 @@ public class Pile {
      * @return le nombre d'éléments
      */
     public int taille(){
-        //TODO
+        return listeDeString.size();
     }
+
+    /**
+     * Cette méthode retourne l'objet String au sommet de la pile
+     * @return l'objet de type String
+     */
+    public String sommet(){
+        int sommet = taille();
+        return listeDeString.get(sommet);
+    }
+
+    /**
+     * Cette méthode ajoute "s" à la pile
+     * @param s de type String
+     */
+    public void empiler(String s){
+        listeDeString.add(s);
+    }
+
+    /**
+     * Cette méthode retire le sommet de la pile et le retourne
+     * @return le sommet de la pile
+     */
+    public String depiler(){
+        String sommet = sommet();
+        listeDeString.remove(sommet);
+        return sommet;
+    }
+
+
 
 }

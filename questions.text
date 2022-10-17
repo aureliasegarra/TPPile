@@ -1,0 +1,28 @@
+Question 1 :
+Écrire une classe test pour tester le fonctionnement de votre classe.
+
+Question 2 :
+On souhaite maintenant que la classe Pile puisse contenir non pas des
+objets de type String mais des objets de type quelconque.
+
+1) Quelle est la solution à mettre en œuvre si une pile peut contenir
+des objets de type hétérogene ?
+2) Quelle est la solution a mettre en œuvre si une pile ne peut contenir
+que des objets du même type ? Expliquer les modifications qui devraient alors être
+apportées au code précédent.
+
+Question 3 :
+1) Quelle est la différence entre cette interface et les classes discutées dans la question précédente?
+2) Quels sont les avantages et les inconvénients de la solution offerte par l’interface ?
+3) Modifier l'interface pour qu'elle soit vraiment générique.
+4) Modifier et tester votre classe Pile pour qu'elle utilise l’interface IPile.
+
+Question 4 :
+1) Ajouter a la classe Pile composée d’objets String la possibilité d’écrire son contenu dans un fichier texte passé en parametre. On écrira un élément par ligne.
+2) Ajouter a la classe Pile composée d’objets String la possibilité de lire son contenu depuis un fichier texte passé en parametre. On lira un élément par ligne.
+
+Question 5 :
+On souhaite maintenant pouvoir sauvegarder un objet Pile dans un fichier binaire et pouvoir le relire pour instancier un nouvel objet de type Pile.
+On pourra utiliser les classes ObjectInputStream et ObjectOutputStream respectivement pour lire (méthode readObject) et écrire (méthode writeObject) des objets dans un fichier. Ces classes nécessitent que l’objet a lire ou écrire puisse subir une sérialisation, et qu’il implémente donc l’interface Serializable.
+
+Ajouter les nouvelles méthodes a votre classe Pile.
