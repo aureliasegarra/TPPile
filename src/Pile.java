@@ -1,3 +1,4 @@
+import java.io.*;
 import java.util.ArrayList;
 
 /**
@@ -51,6 +52,45 @@ public class Pile implements IPile{
         String sommet = sommet();
         listeDeString.remove(sommet);
         return sommet;
+    }
+
+    /**
+     * Cette méthode permet d'écrire les données dans un fichier texte, en écrivant une donnée par ligne
+     * @param fichier de type File
+     */
+    public void ecritureDonnees(String fichier){
+        File unFichier = new File(fichier);
+        // si le fichier existe déjà, les données seront écrasées par les nouvelles
+        try {
+            PrintWriter writer = new PrintWriter(unFichier);
+            for (String line : listeDeString){
+                writer.println(line);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Cette méthode permet de lire les données depuis un fichier texte passé en paramètre.
+     * On lira un élément par ligne.
+     * @param fichier de type File
+     */
+    public ArrayList<String> lectureDonnees(String fichier){
+        File unFichier = new File(fichier);
+
+        try {
+            BufferedReader tampon = new BufferedReader(new FileReader(unFichier));
+            String line;
+
+            while((line = tampon.readLine()) != null){
+                empiler(line);
+            }
+            tampon.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return listeDeString;
     }
 
 

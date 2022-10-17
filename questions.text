@@ -14,7 +14,6 @@ apportées au code précédent.
 Réponse => Je peux définir plusieurs ArrayList en fonction de ce que j'ai besoin
 - ArrayList<String>
 - ArrayList<Integer>
-- ArrayList<double>
 ...
 
 Question 3 :
@@ -27,15 +26,20 @@ On dispose maintenant d’une interface Pile (voir Interface IPile)
         Réponse =>
         - Avantage : une classe peut implémenter plusieurs interfaces => héritage multiple
         - Inconvénient : une interface ne peut pas être instanciée
-3) Modifier l'interface pour qu'elle soit vraiment générique.
-4) Modifier et tester votre classe Pile pour qu'elle utilise l’interface IPile.
+✅ 3) Modifier l'interface pour qu'elle soit vraiment générique.
+✅ 4) Modifier et tester votre classe Pile pour qu'elle utilise l’interface IPile.
 
 Question 4 :
-1) Ajouter a la classe Pile composée d’objets String la possibilité d’écrire son contenu dans un fichier texte passé en parametre. On écrira un élément par ligne.
-2) Ajouter a la classe Pile composée d’objets String la possibilité de lire son contenu depuis un fichier texte passé en parametre. On lira un élément par ligne.
+✅ 1) Ajouter a la classe Pile composée d’objets String la possibilité d’écrire son contenu dans un fichier texte
+   passé en paramètre. On écrira un élément par ligne.
+✅ 2) Ajouter a la classe Pile composée d’objets String la possibilité de lire son contenu depuis un fichier texte
+   passé en paramètre. On lira un élément par ligne.
 
 Question 5 :
-On souhaite maintenant pouvoir sauvegarder un objet Pile dans un fichier binaire et pouvoir le relire pour instancier un nouvel objet de type Pile.
-On pourra utiliser les classes ObjectInputStream et ObjectOutputStream respectivement pour lire (méthode readObject) et écrire (méthode writeObject) des objets dans un fichier. Ces classes nécessitent que l’objet a lire ou écrire puisse subir une sérialisation, et qu’il implémente donc l’interface Serializable.
+1) Pouvoir sauvegarder un objet Pile dans un fichier binaire et pouvoir le relire pour instancier
+un nouvel objet de type Pile.
+    - On pourra utiliser les classes ObjectInputStream pour lire (méthode readObject)
+    - ObjectOutputStream pour écrire (méthode writeObject) des objets dans un fichier.
+    - L’objet à lire ou à écrire peut subir une sérialisation, et implémente l’interface Serializable.
 
-Ajouter les nouvelles méthodes a votre classe Pile.
+
