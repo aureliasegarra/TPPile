@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /**
  * Cette classe représente une structure de données de type Pile qui contient des chaînes de caracteres.
  */
-public class Pile {
+public class Pile implements IPile{
 
     private final ArrayList<String> listeDeString = new ArrayList<>();
 

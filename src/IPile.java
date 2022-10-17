@@ -1,5 +1,5 @@
 public interface IPile {
-    public Object depiler();
-    public void empiler(Object o) ;
+    public String depiler();
+    public void empiler(String s) ;
     public boolean estVide();
 }
