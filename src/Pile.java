@@ -8,6 +8,7 @@ public class Pile {
     private final ArrayList<String> listeDeString = new ArrayList<>();
 
     public Pile(ArrayList<String> listeDeString) {}
+    public Pile(){}
 
     /**
      * Cette méthode vérifie si la pile est vide
@@ -30,7 +31,7 @@ public class Pile {
      * @return l'objet de type String
      */
     public String sommet(){
-        int sommet = taille();
+        int sommet = taille()-1;
         return listeDeString.get(sommet);
     }
 
