@@ -8,6 +8,7 @@ public class Pile implements IPile{
 
     private final ArrayList<String> listeDeString = new ArrayList<>();
 
+
     public Pile(ArrayList<String> listeDeString) {}
     public Pile(){}
 
