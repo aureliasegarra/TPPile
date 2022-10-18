@@ -16,5 +16,9 @@ public class Main {
         }
 
         //System.out.println(maListe);
+
+        pile.saveBinaire("text2.txt");
+
+
     }
 }

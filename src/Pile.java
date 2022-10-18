@@ -4,8 +4,9 @@ import java.util.ArrayList;
 /**
  * Cette classe représente une structure de données de type Pile qui contient des chaînes de caracteres.
  */
-public class Pile implements IPile{
+public class Pile implements IPile, Serializable{
 
+    private final long serialVersionUID = 1L;
     private final ArrayList<String> listeDeString = new ArrayList<>();
 
 
@@ -92,6 +93,31 @@ public class Pile implements IPile{
             e.printStackTrace();
         }
         return listeDeString;
+    }
+
+
+    public void saveBinaire(String monFichier) {
+        try {
+            File file = new File(monFichier);
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(file));
+            this.ecritureDonnees("text2.txt");
+            objectOutputStream.writeObject(this);
+            objectOutputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void readBinaire(String monFichier){
+        try {
+            File file = new File(monFichier);
+            ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(file));
+            Pile pile = (Pile) objectInputStream.readObject();
+            System.out.println(pile.toString());
+            objectInputStream.close();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
 
